@@ -10,3 +10,10 @@ ENV HOME=/${WORKDIR} \
   API_URL=${API_URL}
 
 WORKDIR ${HOME}
+
+COPY package*.json ./
+RUN npm install
+
+COPY . ./
+
+RUN npm run build
