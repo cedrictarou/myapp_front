@@ -20,7 +20,7 @@ export default {
   css: ['~/assets/sass/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['plugins/axios'],
+  plugins: ['plugins/axios', 'plugins/my-inject.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

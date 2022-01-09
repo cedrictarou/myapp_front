@@ -22,8 +22,8 @@
         {{ $t(`menus.${menu.title}`) }}
       </v-btn>
     </v-toolbar-items>
-    <app-signup-button />
-    <app-login-button />
+    <before-login-app-bar-login-button />
+    <before-login-app-bar-signup-button />
 
     <v-menu bottom nudge-left="110" nudge-width="100">
       <template #activator="{ on }">
@@ -37,7 +37,7 @@
           @click="$vuetify.goTo(`#${menu.title}`)"
         >
           <v-list-item-title>
-            {{ $t(`menus.${menu.title}`) }}
+            {{ $my.pageTitle(`menus.${menu.title}`) }}
           </v-list-item-title>
         </v-list-item>
       </v-list>
