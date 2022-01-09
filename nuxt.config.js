@@ -57,6 +57,7 @@ export default {
           warning: 'FEB65E',
           error: 'FB8678',
           background: 'f6f6f4',
+          appblue: '1867C0',
         },
       },
     },
