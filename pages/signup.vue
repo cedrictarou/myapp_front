@@ -1,14 +1,20 @@
 <template>
   <user-form-card>
     <template #form-card-content>
-      <v-form v-model="isValid">
+      <v-form v-model="isValid" ref="form">
         <user-form-name :name.sync="params.user.name" />
         <user-form-email :email.sync="params.user.email" placeholder />
         <user-form-password
           :password.sync="params.user.password"
           set-validation
         />
-        <v-btn :disabled="!isValid" block class="white--text" color="appblue"
+        <v-btn
+          :disabled="!isValid || loading"
+          :loading="loading"
+          block
+          class="white--text"
+          color="appblue"
+          @click="signup"
           >登録する</v-btn
         >
       </v-form>
@@ -22,6 +28,7 @@ export default {
   data() {
     return {
       isValid: false,
+      loading: false,
       params: {
         user: {
           name: '',
@@ -30,6 +37,21 @@ export default {
         },
       },
     }
+  },
+  methods: {
+    signup() {
+      this.loading = true
+      setTimeout(() => {
+        this.loading = false
+        this.formReset()
+      }, 1500)
+    },
+    formReset() {
+      this.$refs.form.reset()
+      for (const key in this.params.user) {
+        this.params.user[key] = ''
+      }
+    },
   },
 }
 </script>
