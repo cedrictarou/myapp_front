@@ -39,7 +39,7 @@ export default {
           password: '',
         },
       },
-      redirectPath: $store.state.loggedIn.redirectPath,
+      redirectPath: $store.state.loggedIn.homePath,
     }
   },
   methods: {
