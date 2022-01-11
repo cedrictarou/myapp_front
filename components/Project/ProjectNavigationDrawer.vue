@@ -2,7 +2,7 @@
   <v-navigation-drawer v-model="setDrawer" app clipped mobile-breakpoint="960">
     <v-list>
       <!-- close button -->
-      <template v-if="isBreakpoint">
+      <template v-if="isBreakpointLessThan">
         <v-list-item @click="$emit('update:drawer', false)">
           <v-list-item-content class="text-center">
             <v-list-item-action-text class="d-flex justify-center align-center">
@@ -63,7 +63,7 @@ export default {
         return this.$emit('update:drawer', newValue)
       },
     },
-    isBreakpoint() {
+    isBreakpointLessThan() {
       const windowWidth = this.$vuetify.breakpoint.width
       const mobileBreakpoint = 960
       return windowWidth < mobileBreakpoint
