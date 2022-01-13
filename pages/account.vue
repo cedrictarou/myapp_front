@@ -5,7 +5,7 @@
       small
       plain
       color="primary"
-      :to="`/project/${currentProject.id}/dashbord`"
+      :to="`/project/${currentProject.id}/dashboard`"
     >
       <v-icon left> mdi-chevron-double-left </v-icon>
       {{ $my.pageTitle(dashboardPath) }}にもどる

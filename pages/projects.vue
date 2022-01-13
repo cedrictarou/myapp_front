@@ -44,7 +44,7 @@
                     block
                     :height="card.height"
                     :elevation="card.elevation"
-                    :to="`/project/${project.id}/dashbord`"
+                    :to="`/project/${project.id}/dashboard`"
                     class="text-capitalize"
                   >
                     <v-card-title class="pb-1 d-block text-truncate">
@@ -81,7 +81,7 @@
           >
             <template #[`item.name`]="{ item }">
               <nuxt-link
-                :to="`/project/${item.id}/dashbord`"
+                :to="`/project/${item.id}/dashboard`"
                 class="text-decoration-none"
               >
                 {{ item.name }}
