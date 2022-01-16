@@ -15,7 +15,7 @@ export const state = () => ({
       { id: 1, name: 'MyProject01', updatedAt: '2020-04-01T12:00:00+09:00' },
       {
         id: 2,
-        name: 'MyProject02MyProject02MyProject02MyProject02',
+        name: 'MyProject02',
         updatedAt: '2020-04-05T12:00:00+09:00',
       },
       { id: 3, name: 'MyProject03', updatedAt: '2020-04-03T12:00:00+09:00' },

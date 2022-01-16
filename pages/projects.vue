@@ -44,7 +44,7 @@
                     block
                     :height="card.height"
                     :elevation="card.elevation"
-                    :to="`/project/${project.id}/dashboard`"
+                    :to="$my.projectLinkTo(project.id)"
                     class="text-capitalize"
                   >
                     <v-card-title class="pb-1 d-block text-truncate">
