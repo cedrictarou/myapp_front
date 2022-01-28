@@ -43,7 +43,10 @@ export default {
     appName: process.env.APP_NAME,
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    // クロスドメインで認証情報を共有する
+    credentials: true,
+  },
 
   vuetify: {
     customVariables: ['~/assets/sass/variables.scss'],
