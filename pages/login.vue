@@ -57,10 +57,10 @@ export default {
     },
     authSuccessful(response) {
       this.$auth.login(response)
-      console.log('token', this.$auth.token)
-      console.log('expires', this.$auth.expires)
-      console.log('payload', this.$auth.payload)
-      console.log('user', this.$auth.user)
+      // console.log('token', this.$auth.token)
+      // console.log('expires', this.$auth.expires)
+      // console.log('payload', this.$auth.payload)
+      // console.log('user', this.$auth.user)
       // Todo 記録ルートリダイレクト
       this.$router.push(this.redirectPath)
     },

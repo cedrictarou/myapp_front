@@ -102,6 +102,7 @@
 import homeImg from '~/assets/images/logged-in/home.png'
 export default {
   layout: 'logged-in',
+  middleware: ['get-project-list'],
   data() {
     return {
       homeImg,
