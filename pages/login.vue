@@ -56,8 +56,11 @@ export default {
       this.loading = false
     },
     authSuccessful(response) {
-      console.log('authSuccessful', response)
-      // Todo ログイン処理
+      this.$auth.login(response)
+      console.log('token', this.$auth.token)
+      console.log('expires', this.$auth.expires)
+      console.log('payload', this.$auth.payload)
+      console.log('user', this.$auth.user)
       // Todo 記録ルートリダイレクト
       this.$router.push(this.redirectPath)
     },
