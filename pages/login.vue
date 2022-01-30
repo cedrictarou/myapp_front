@@ -36,7 +36,8 @@ export default {
       params: {
         auth: {
           // Todo 削除する
-          email: 'user0@example.com',
+          // email: 'user0@example.com',
+          email: 'aaaaaaaaaaaaaaaaaaaaa',
           password: 'password',
         },
       },
