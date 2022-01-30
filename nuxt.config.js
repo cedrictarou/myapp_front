@@ -47,6 +47,10 @@ export default {
   publicRuntimeConfig: {
     appName: process.env.APP_NAME,
   },
+
+  router: {
+    middleware: ['silent-refresh-token'],
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // クロスドメインで認証情報を共有する
