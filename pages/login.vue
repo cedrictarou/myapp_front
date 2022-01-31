@@ -36,8 +36,7 @@ export default {
       params: {
         auth: {
           // Todo 削除する
-          // email: 'user0@example.com',
-          email: 'aaaaaaaaaaaaaaaaaaaaa',
+          email: 'user0@example.com',
           password: 'password',
         },
       },
@@ -68,6 +67,8 @@ export default {
     authFailure({ response }) {
       if (response && response.status === 404) {
         // Todoトースターを出力
+        const msg = 'ユーザーが見つかりません😢'
+        return this.$store.dispatch('getToast', { msg })
       }
       // Todo エラー処理
     },
