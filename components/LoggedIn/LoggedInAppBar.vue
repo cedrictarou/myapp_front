@@ -27,7 +27,7 @@ export default {
   },
   data({ $store }) {
     return {
-      homePath: $store.state.loggedIn.homePath,
+      homePath: $store.state.loggedIn.homePath.name,
     }
   },
   computed: {
