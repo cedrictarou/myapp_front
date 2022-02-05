@@ -16,9 +16,7 @@ export default async ({ $auth, $axios, store, route, redirect, isDev }) => {
             'セッションの有効期限が切れました。' +
             'もう一度ログインしてください'
 
-          // TODO トースター出力
           store.dispatch('getToast', { msg })
-          // TODO アクセスルート記憶
           store.dispatch('getRememberPath', route)
           return redirect('/login')
         }

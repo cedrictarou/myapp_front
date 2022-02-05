@@ -35,9 +35,8 @@ export default {
       loading: false,
       params: {
         auth: {
-          // Todo 削除する
-          email: 'user0@example.com',
-          password: 'password',
+          email: '',
+          password: '',
         },
       },
       redirectPath: $store.state.loggedIn.rememberPath,
@@ -58,18 +57,16 @@ export default {
     },
     authSuccessful(response) {
       this.$auth.login(response)
-      // Todo 記録ルートリダイレクト
       this.$router.push(this.redirectPath)
       // 記憶ルートを初期値に戻す
       this.$store.dispatch('getRememberPath', this.loggedInHomePath)
     },
     authFailure({ response }) {
       if (response && response.status === 404) {
-        // Todoトースターを出力
         const msg = 'ユーザーが見つかりません😢'
         return this.$store.dispatch('getToast', { msg })
       }
-      // Todo エラー処理
+      return this.$my.apiErrorHandler(response)
     },
   },
 }
