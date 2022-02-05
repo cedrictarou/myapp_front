@@ -12,6 +12,7 @@
 <script>
 export default {
   name: 'LayoutsBeforeLogin',
+  middleware: ['logged-in-redirect'],
 }
 </script>
 
